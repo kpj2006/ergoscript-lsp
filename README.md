@@ -1,17 +1,15 @@
 # 🚀 ErgoScript LSP - Language Server Protocol Implementation
 
-[![Status](https://img.shields.io/badge/status-proof--of--concept-orange)]()
-[![Implementation Time](https://img.shields.io/badge/implementation-2%20hours-green)]()
-[![Lines of Code](https://img.shields.io/badge/lines%20of%20code-~1060-blue)]()
-[![License](https://img.shields.io/badge/license-CC0-lightgrey)]()
-
 > **Modern IDE support for ErgoScript** - The smart contract language for Ergo blockchain
 
 Bringing professional development experience to ErgoScript with syntax highlighting, real-time diagnostics, hover information, and auto-completion.
 
+
+
+## This addresses [ergoplatform/sigmastate-interpreter#1091](https://github.com/ergoplatform/sigmastate-interpreter/issues/1091)
 ---
 
-## ⚡ Quick Start (5 Minutes)
+## ⚡ Quick Start 
 
 ```powershell
 # Clone or navigate to this directory
@@ -48,41 +46,8 @@ code ergoscript-vscode
 | **Find References** | 🚧 Future | Find all usages |
 | **Rename Refactoring** | 🚧 Future | Rename symbols |
 
----
 
-## 🎯 What This Is
 
-A **Language Server Protocol (LSP)** implementation for ErgoScript that provides modern IDE features similar to TypeScript, Python, or Rust. Built in **2 hours** as a proof-of-concept demonstration.
-
-### Before LSP
-```
-📝 Notepad
-❌ No syntax highlighting
-❌ No error detection
-❌ No auto-completion
-❌ Manual docs lookup
-```
-
-### After LSP
-```
-✨ VS Code / IntelliJ / Vim
-✅ Syntax highlighting
-✅ Real-time errors
-✅ Auto-completion
-✅ Instant documentation
-```
-
----
-
-## 📊 Stats
-
-- **Implementation Time**: 2 hours
-- **Lines of Code**: ~1,060 (code) + ~900 (documentation)
-- **Files Created**: 23
-- **Features Working**: 4/4 core LSP features
-- **Example Contracts**: 4 real ErgoScript demos
-
----
 
 ## 🏗️ Architecture
 
@@ -93,19 +58,19 @@ A **Language Server Protocol (LSP)** implementation for ErgoScript that provides
          │ Extension API
 ┌────────▼───────────────┐
 │  Language Client       │  ergoscript-vscode/
-│  (Extension)           │  ~180 lines
+│  (Extension)           │  
 └────────┬───────────────┘
          │ JSON-RPC / IPC
 ┌────────▼───────────────┐
 │  LSP Server            │  ergoscript-lsp/
-│  - Diagnostics         │  ~380 lines
+│  - Diagnostics         │
 │  - Hover               │
 │  - Completion          │
 └────────┬───────────────┘
          │ 
 ┌────────▼───────────────┐
 │  Parser Interface      │  parser.ts
-│  (Basic validation     │  ~110 lines
+│  (Basic validation     │ 
 │   + Future JVM bridge) │
 └────────┬───────────────┘
          │ Future integration
@@ -147,10 +112,9 @@ examples/                    ← Demo ErgoScript Contracts
 
 ---
 
-## 🎬 Live Demo
+
 
 ### 1. Syntax Highlighting
-![Syntax highlighting example](https://img.shields.io/badge/ErgoScript-Highlighted-brightgreen)
 ```scala
 {
   val deadlineHeight = 1000000
@@ -178,26 +142,4 @@ sigmaProp(condition: Boolean): SigmaProp
 { val x = (10 + 20  // ← Red squiggle: Unclosed parenthesis
 ```
 
----
-
-## 🤝 Contributing
-
-- 🐛 Report bugs via GitHub issues
-- 💡 Suggest features
-- 📝 Improve documentation
-- 🔌 Implement advanced LSP features
-
----
-
-## 📣 Share & Connect
-
-⭐ Star this repo if you find it useful  
-🤝 Contribute to make it production-ready  
-
----
-
-**Made for the Ergo community**
-
-*Bringing modern developer experience to blockchain smart contracts*
-
-
+https://github.com/user-attachments/assets/4d274b01-a13c-40ea-aa2a-fa97b9cede43
