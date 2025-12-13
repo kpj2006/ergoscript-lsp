@@ -1,0 +1,26 @@
+{
+  // Crowd-funding contract
+  val campaignDeadline = 1000000
+  val minToRaise = 1000000000L  // 1000 ERG in nanoERG
+  val projectPubKey = proveDlog(decodePoint(SELF.R4[Coll[Byte]].get))
+  
+  val fundraisedSoFar = OUTPUTS.fold(0L, { (acc: Long, box: Box) => 
+    acc + box.value 
+  })
+  
+  val campaignSuccessful = fundraisedSoFar >= minToRaise
+  val deadlinePassed = HEIGHT > campaignDeadline
+  
+  if (campaignSuccessful) {
+    // Campaign successful - only project owner can spend
+    projectPubKey
+  } else if (deadlinePassed) {
+    // Campaign failed and deadline passed - anyone can refund
+    sigmaProp(true)
+  } else {
+    // Campaign still ongoing - no one can spend
+    sigmaProp(false)
+  }
+}
+
+SigmaProp

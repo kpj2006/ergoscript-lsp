@@ -1,0 +1,8 @@
+{
+  // Multi-signature wallet: 2 out of 3 signatures required
+  val pubKey1 = proveDlog(decodePoint(SELF.R4[Coll[Byte]].get))
+  val pubKey2 = proveDlog(decodePoint(SELF.R5[Coll[Byte]].get))
+  val pubKey3 = proveDlog(decodePoint(SELF.R6[Coll[Byte]].get))
+  
+  atLeast(2, Coll(pubKey1, pubKey2, pubKey3))
+}

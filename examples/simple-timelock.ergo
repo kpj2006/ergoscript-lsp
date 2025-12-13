@@ -1,0 +1,6 @@
+{
+  // Simple contract: Only allow spending after height 1000000
+  val deadlineHeight = 1000000
+  val heightCondition = HEIGHT > deadlineHeight
+  sigmaProp(heightCondition)
+}

@@ -1,0 +1,16 @@
+{
+  "name": "ergoscript-parser-bridge",
+  "version": "0.1.0",
+  "description": "JVM bridge to call ErgoScript parser from Node.js",
+  "main": "bridge.js",
+  "scripts": {
+    "compile": "cd ../sigmastate-interpreter && sbt \"project sigma\" compile",
+    "build-jar": "cd ../sigmastate-interpreter && sbt \"project sigma\" assembly"
+  },
+  "dependencies": {
+    "java-bridge": "^1.0.0"
+  },
+  "keywords": ["ergoscript", "parser", "jvm"],
+  "author": "ErgoScript Community",
+  "license": "CC0"
+}

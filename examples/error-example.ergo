@@ -1,0 +1,12 @@
+{
+  // Example with syntax errors for testing diagnostics
+  
+  val x = 10
+  val y = (20 + x  // Missing closing parenthesis
+  
+  if (x > 5) {
+    sigmaProp(true)
+  // Missing closing brace
+  
+  val unclosedBracket = Coll[1, 2, 3
+}
