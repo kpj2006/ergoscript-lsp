@@ -1,4 +1,4 @@
-# 🚀 ErgoScript LSP - Language Server Protocol Implementation
+## 🚀 ErgoScript LSP - Language Server Protocol Implementation
 
 > **Modern IDE support for ErgoScript** - The smart contract language for Ergo blockchain
 
